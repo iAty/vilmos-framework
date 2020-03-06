@@ -1,0 +1,39 @@
+@import "inc/nav";
+@import "inc/sidebar";
+
+$bgcolor: black;
+
+$font body {
+    background-color: $bgcolor;
+}
+
+h2 {
+    color: $bgcolor;
+}
+
+@mixin header-text {
+    color: red;
+}
+
+@mixin link {
+    text-decoration: underline;
+}
+
+.spa {
+    @include header-text;
+}
+
+@mixin footer-text {
+    @include header-text;
+    @include link;
+}
+
+.btn {
+    font-size: 1rem;
+    background-color: black;
+}
+
+footer-btn {
+    @extend .btn;
+    background-color: red;
+}
